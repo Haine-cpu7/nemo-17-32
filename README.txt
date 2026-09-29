@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.5.9
+NEMO : 17:32  COMPLETE v0.7.3
 
 ■ 起動方法
 1. ZIPを展開
@@ -506,4 +506,10 @@ END:
 - 本編 CHAPTER 02 / 介入 のスチルを新規採用版へ差し替え。
 - 画像: stills/main_intervention.webp を更新。
 - 落ちた小物は傘ではなく、未来感のある観測端末へ変更。
+- 既存のARCHIVE順・内部ID・解放状態は維持。
+
+[v0.7.3]
+- EXTRA RECORD II のスチルを正式採用版へ差し替え。
+- 画像: stills/extra2_magic_circle.webp を更新。
+- THRONE EYE の墜落が一目で分かる、魔法陣付きの新イラストへ変更。
 - 既存のARCHIVE順・内部ID・解放状態は維持。
