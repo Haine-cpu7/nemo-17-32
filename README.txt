@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.4.9
+NEMO : 17:32  COMPLETE v0.5.0
 
 ■ 起動方法
 1. ZIPを展開
@@ -247,4 +247,15 @@ END:
 ・中央の無意味な空白を大きく削減
 ・話者名の枠内表示、スクロール、Safe Area対応は維持
 ・選択肢表示位置を少し上へ調整
+・PC版レイアウトは変更なし
+
+
+■ v0.5.0 スマホタイトル画面整理
+・スマホタイトル画面の6ボタンを2列×3段に統一
+・NEW RECORD / CONTINUE
+・EXTRA RECORD I / EXTRA RECORD II
+・EXTRA RECORD III / EXTRA RECORD IV
+・すべて同じ幅・同じ高さ
+・EXTRA IIIの横2列ぶち抜き表示を廃止
+・長いLOCKED表示も中央揃えで収まるよう調整
 ・PC版レイアウトは変更なし
