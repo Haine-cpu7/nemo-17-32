@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.4.6
+NEMO : 17:32  COMPLETE v0.4.7
 
 ■ 起動方法
 1. ZIPを展開
@@ -168,3 +168,32 @@ EXTRA RECORD I の冒頭を改稿。
 BEAST INSTINCT SUPPRESSION / SELF-RESTRAINT / ORIGINAL BEAST AUTHORITY 演出を追加。
 
 本編正史への影響はありません。
+
+
+■ v0.4.7 EXTRA RECORD III 追加
+
+本編クリア後に、EXTRA RECORD I / II / III の3本が解禁されます。
+
+EXTRA RECORD III
+NEMO : STILL I CHOOSE THIS WORLD
+「それでも、ねもはこの世界を選ぶ。」
+
+榊を取り戻すために WORLD-0000 を復元できる「PROJECT N.E.M.O. / LAST RESORT」を発見。
+しかし実行すれば現在の世界線と、そこにいる生命・関係・記憶は保証されません。
+
+「榊に会いたい」という願いと、
+「知らない誰かの今日まで消していいのか」という選択の間で、
+ねも自身が世界を残すことを決めるIFストーリーです。
+
+クライマックスでは王女の力を「世界を壊すため」ではなく
+「世界を作り直す装置を止めるため」に使用します。
+
+EXTRA RECORD III END:
+NEMO : STILL I CHOOSE THIS WORLD
+
+世界は、正しくない。
+それでも、なくしていいものではない。
+
+※正史には影響しません。
+※EXTRA RECORDはSAVE不可。
+※スマホでは5つ目のEXTRA RECORD IIIボタンを独立した横一列に配置し、見切れを防止。
