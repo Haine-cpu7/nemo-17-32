@@ -237,13 +237,21 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
     min-height:168px;
     max-height:44vh;
     overflow:auto;
-    padding:24px 18px 30px;
+    padding:48px 18px 30px;
   }
   .speaker{
-    top:-16px;left:16px;
+    top:0;
+    left:0;
     min-width:96px;
-    padding:6px 12px;
+    max-width:70%;
+    padding:7px 14px;
     font-size:12px;
+    line-height:1.2;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    border-right:1px solid #2b3643;
+    border-bottom:1px solid #2b3643;
   }
   .text{
     min-height:78px;
