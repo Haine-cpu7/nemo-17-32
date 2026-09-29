@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.5.1
+NEMO : 17:32  COMPLETE v0.5.2
 
 ■ 起動方法
 1. ZIPを展開
@@ -270,3 +270,11 @@ END:
   2段目 EXTRA RECORD I / EXTRA RECORD II
   3段目 EXTRA RECORD III / EXTRA RECORD IV
 ・PC版レイアウトは変更なし
+
+
+■ v0.5.2 エピソード終了後の自動タイトル復帰
+・本編 / EXTRA の end シーン到達後、約5秒で自動的にタイトルへ戻る
+・終了シーン表示直後に「5秒後にタイトルへ戻ります」トースト表示
+・途中でタップ / Enter した場合は即タイトルへ戻る
+・タイトルへ戻る／別ルート開始／ロード時にはタイマーを自動解除
+・本編クリア判定と EXTRA RECORD 解禁は従来どおり維持
