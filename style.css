@@ -234,8 +234,9 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
   .textbox{
     left:4vw;right:4vw;
     bottom:max(14px, env(safe-area-inset-bottom));
-    min-height:168px;
-    max-height:44vh;
+    height:clamp(260px,31dvh,390px);
+    min-height:260px;
+    max-height:40dvh;
     overflow:auto;
     padding:48px 18px 30px;
   }
@@ -271,7 +272,7 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
   }
   .choice-box{
     width:90vw;
-    top:36%;
+    top:32%;
     gap:9px;
   }
   .choice-btn{
