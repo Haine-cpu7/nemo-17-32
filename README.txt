@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.4.4
+NEMO : 17:32  COMPLETE v0.4.5
 
 ■ 起動方法
 1. ZIPを展開
@@ -140,3 +140,11 @@ N.E.M.O. OBSERVATION NETWORK / STATUS : OFFLINE / CAUSE : NEMO
 ・長文スクロール時にもラベルがクリップされないよう調整
 ・本文の上余白を増やし、話者名と本文が重ならないよう修正
 ・PC版レイアウトは変更なし
+
+
+■ v0.4.5 EXTRA解禁仕様
+・EXTRA I / EXTRA II は初回起動時 LOCKED
+・正史本編 FINAL「誰にも渡さない」の END 到達で両EXTRAを解禁
+・クリア状態はブラウザのlocalStorageに保存され、再訪後も解禁状態を維持
+・旧版の手動SAVEがFINAL地点にある場合はクリア済みとして移行
+・EXTRA側から本編クリア扱いになることはありません
