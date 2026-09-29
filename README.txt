@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.5.7
+NEMO : 17:32  COMPLETE v0.5.9
 
 ■ 起動方法
 1. ZIPを展開
@@ -360,7 +360,7 @@ END:
 ・他の本編／EXTRA RECORDの内容は変更なし
 
 
-■ v0.5.7 17:32 ARCHIVE 追加
+■ v0.5.8 17:32 ARCHIVE 追加
 恋愛ADVのCGギャラリーのような「スチル収集」機能を追加。
 
 ・タイトル画面に「17:32 ARCHIVE」を追加
@@ -375,7 +375,7 @@ END:
 ・本編クリア済みユーザーは、本編分12枚を自動復元
 ・EXTRA RECORD I〜Vは各END到達時に1枚ずつ回収
 ・SAVE / LOAD、EXTRA解禁、END後5秒復帰、Safariキャッシュ対策等は維持
-・SAVE_KEYを v0.5.7 へ更新し、v0.5.6以前をLEGACY_SAVE_KEYSで互換読み込み
+・SAVE_KEYを v0.5.8 へ更新し、v0.5.6以前をLEGACY_SAVE_KEYSで互換読み込み
 ・style.css / script.js のキャッシュバスターを ?v=0.5.7 へ更新
 
 17枚の内訳：
@@ -400,3 +400,8 @@ END:
 ※今回の画像17枚は、制作中に作成したビジュアルを仮スチルとして収録しています。
 　stills/still_01.webp ～ still_17.webp を同名ファイルで差し替えるだけで、
 　今後画像だけ更新できます。
+
+
+[v0.5.9]
+- 17:32 ARCHIVE の EXTRA RECORD II スチル（still_14.webp）を、観測要塞落下時の巨大魔法陣イラストへ差し替え。
+- index.html のキャッシュバージョンを 0.5.9 に更新。
