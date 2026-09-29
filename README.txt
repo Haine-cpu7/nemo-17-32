@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.4.5
+NEMO : 17:32  COMPLETE v0.4.6
 
 ■ 起動方法
 1. ZIPを展開
@@ -148,3 +148,23 @@ N.E.M.O. OBSERVATION NETWORK / STATUS : OFFLINE / CAUSE : NEMO
 ・クリア状態はブラウザのlocalStorageに保存され、再訪後も解禁状態を維持
 ・旧版の手動SAVEがFINAL地点にある場合はクリア済みとして移行
 ・EXTRA側から本編クリア扱いになることはありません
+
+
+■ v0.4.6 EXTRA RECORD化
+「非正史」というUI表記を廃止し、世界観に合わせて EXTRA RECORD に統一。
+
+本編クリア後に解禁：
+EXTRA RECORD I
+NEMO : UNCHAINED
+「獣は、もう眠らない。」
+
+EXTRA RECORD II
+FALL, STAR OF RECORDS
+「王女は、観測を許さない。」
+
+EXTRA RECORD I の冒頭を改稿。
+榊透の死によって怒りで突然獣化するのではなく、
+人の世界で生きるためにねも自身が抑えていた「本来の獣の力」の鎖が外れる設定へ変更。
+BEAST INSTINCT SUPPRESSION / SELF-RESTRAINT / ORIGINAL BEAST AUTHORITY 演出を追加。
+
+本編正史への影響はありません。
