@@ -22,7 +22,7 @@
 <meta name="twitter:title" content="NEMO : 17:32" />
 <meta name="twitter:description" content="この17分だけは、誰にも渡さない。 記録者・榊透とねもの、空白の17分32秒をめぐるWebノベルゲーム。" />
 <meta name="twitter:image" content="https://haine-cpu7.github.io/nemo-17-32/ogp.png" />
-<link rel="stylesheet" href="style.css?v=0.5.6" />
+<link rel="stylesheet" href="style.css?v=0.5.7" />
 <style>
 /* v0.5.1 inline safety override for mobile title grid */
 @media (max-width: 760px){
@@ -53,6 +53,7 @@
   .title-actions > button:nth-child(5){grid-row:3;grid-column:1;}
   .title-actions > button:nth-child(6){grid-row:3;grid-column:2;}
   .title-actions > button:nth-child(7){grid-row:4;grid-column:1 / -1;}
+  .title-actions > button:nth-child(8){grid-row:5;grid-column:1 / -1;}
 }
 </style>
 </head>
@@ -72,8 +73,28 @@
         <button id="extra3Btn" disabled>EXTRA RECORD III / LOCKED</button>
         <button id="extra4Btn" disabled>EXTRA RECORD IV / LOCKED</button>
         <button id="extra5Btn" disabled>EXTRA RECORD V / LOCKED</button>
+        <button id="archiveBtn" class="archive-title-btn">17:32 ARCHIVE</button>
       </div>
-      <div class="version">COMPLETE v0.5.6 / PC & MOBILE WEB NOVEL</div>
+      <div class="version">COMPLETE v0.5.7 / PC & MOBILE WEB NOVEL</div>
+    </div>
+  </section>
+
+
+  <section id="archiveScreen" class="screen archive-screen">
+    <div class="scanlines"></div>
+    <div class="archive-shell">
+      <header class="archive-head">
+        <div>
+          <div class="archive-eyebrow">N.E.M.O. PERSONAL RECORD / RECOVERED FRAGMENTS</div>
+          <h2>17:32 ARCHIVE</h2>
+          <p>観測記録からこぼれ落ちた、17の断片。</p>
+        </div>
+        <div class="archive-head-actions">
+          <div id="archiveCount" class="archive-count">00 / 17</div>
+          <button id="archiveBackBtn">RETURN</button>
+        </div>
+      </header>
+      <div id="archiveGrid" class="archive-grid" aria-live="polite"></div>
     </div>
   </section>
 
@@ -114,9 +135,24 @@
     </div>
   </div>
 
+
+  <div id="stillViewer" class="still-viewer hidden" role="dialog" aria-modal="true" aria-label="Archive still viewer">
+    <button id="stillViewerClose" class="still-viewer-close" aria-label="閉じる">CLOSE</button>
+    <button id="stillPrevBtn" class="still-nav still-prev" aria-label="前のスチル">‹</button>
+    <figure class="still-viewer-figure">
+      <img id="stillViewerImage" alt="" />
+      <figcaption>
+        <div id="stillViewerNo" class="still-viewer-no"></div>
+        <div id="stillViewerTitle" class="still-viewer-title"></div>
+        <div id="stillViewerMeta" class="still-viewer-meta"></div>
+      </figcaption>
+    </figure>
+    <button id="stillNextBtn" class="still-nav still-next" aria-label="次のスチル">›</button>
+  </div>
+
   <div id="toast" class="toast hidden"></div>
 </div>
 
-<script src="script.js?v=0.5.6"></script>
+<script src="script.js?v=0.5.7"></script>
 </body>
 </html>

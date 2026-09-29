@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.5.6
+NEMO : 17:32  COMPLETE v0.5.7
 
 ■ 起動方法
 1. ZIPを展開
@@ -17,6 +17,7 @@ LOAD : 保存位置から再開
 LOG : バックログ
 SOUND : システム音ON/OFF
 TITLE : タイトルへ
+17:32 ARCHIVE : 回収済みスチル／記録断片を閲覧
 
 ■ v0.3 収録
 PROLOGUE「観測者」
@@ -357,3 +358,45 @@ END:
 ・選択後の収束台詞「……たぶん、人違い。」の話者を「ねも」から「榊」へ修正
 ・choiceSpeaker を追加し、選択肢ごと／シーンごとに返答話者を明示できる仕組みに変更
 ・他の本編／EXTRA RECORDの内容は変更なし
+
+
+■ v0.5.7 17:32 ARCHIVE 追加
+恋愛ADVのCGギャラリーのような「スチル収集」機能を追加。
+
+・タイトル画面に「17:32 ARCHIVE」を追加
+・全17枠（17分に対応）
+・物語中の特定シーン到達で自動回収
+・未回収は LOCKED 表示
+・回収済みはサムネイル＋記録名を表示
+・クリック／タップで全画面表示
+・全画面表示では前後の回収済みスチルへ移動可能
+・回収状態は localStorage に保存
+・旧セーブデータから、本編の到達地点までのスチルを自動復元
+・本編クリア済みユーザーは、本編分12枚を自動復元
+・EXTRA RECORD I〜Vは各END到達時に1枚ずつ回収
+・SAVE / LOAD、EXTRA解禁、END後5秒復帰、Safariキャッシュ対策等は維持
+・SAVE_KEYを v0.5.7 へ更新し、v0.5.6以前をLEGACY_SAVE_KEYSで互換読み込み
+・style.css / script.js のキャッシュバスターを ?v=0.5.7 へ更新
+
+17枚の内訳：
+01 FIRST CONTACT
+02 INTERVENTION
+03 NAME
+04 OUTSIDE OBSERVATION
+05 DOUBLE RECORD
+06 17:32
+07 MISSING RECORD
+08 PRIVATE ARCHIVE
+09 TERMINATED
+10 GHOST
+11 I CHOOSE
+12 NO ONE ELSE
+13 UNCHAINED
+14 FALL, STAR OF RECORDS
+15 STILL I CHOOSE THIS WORLD
+16 BROKEN SIGNAL
+17 GIVE HIM BACK
+
+※今回の画像17枚は、制作中に作成したビジュアルを仮スチルとして収録しています。
+　stills/still_01.webp ～ still_17.webp を同名ファイルで差し替えるだけで、
+　今後画像だけ更新できます。
