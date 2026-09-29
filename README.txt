@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.4.1
+NEMO : 17:32  COMPLETE v0.4.2
 
 ■ 起動方法
 1. ZIPを展開
@@ -104,3 +104,21 @@ v0.3.4以前のセーブデータを同じブラウザから読み込み可能�
 ・ねもちゃんの顔ファビコン（favicon.ico / favicon-32.png / favicon-192.png / favicon-512.png / apple-touch-icon.png）を追加
 ・index.html に OGP / Twitter Card / favicon 設定を追加
 ・公開URL想定： https://haine-cpu7.github.io/nemo-17-32/
+
+
+■ v0.4.2 追加
+タイトル画面に
+・EXTRA I / 非正史
+・EXTRA II / 王女魔法
+を表示。
+
+EXTRA II「落ちろ、記録の星」
+榊を消されたことで、王女としての記憶と魔法を取り戻したねもが、
+観測者たちの観測網そのものへ神話的な裁きを下す非正史ルートです。
+
+観測の要塞「THRONE EYE（玉座の眼）」を空から落とし、
+最終的に
+N.E.M.O. OBSERVATION NETWORK / STATUS : OFFLINE / CAUSE : NEMO
+で終了します。
+
+本編・公開用OGP/ファビコンを含んだ公開素材版です。
