@@ -7,13 +7,48 @@ const EXTRA5_SCENES = [{"id": "x5_00", "chapter": "EXTRA RECORD V / NEMO : GIVE 
 const SAVE_KEY = "nemo1732_v057_save";
 const LEGACY_SAVE_KEYS = ["nemo1732_v056_save","nemo1732_v055_save","nemo1732_v054_save","nemo1732_v053_save","nemo1732_v052_save","nemo1732_v051_save","nemo1732_v050_save","nemo1732_v049_save","nemo1732_v048_save","nemo1732_v047_save","nemo1732_v046_save","nemo1732_v045_save","nemo1732_v044_save","nemo1732_v042_save","nemo1732_v040_save","nemo1732_v034_save","nemo1732_v033_save","nemo1732_v032_save","nemo1732_v031_save","nemo1732_v03_save","nemo1732_v02_save"];
 const MAIN_CLEAR_KEY = "nemo1732_main_cleared";
-const ARCHIVE_KEY = "nemo1732_archive_unlocks_v060";
-const LEGACY_ARCHIVE_KEYS = ["nemo1732_archive_unlocks_v058", "nemo1732_archive_unlocks_v057"];
+const ARCHIVE_KEY = "nemo1732_archive_unlocks_v064";
+const LEGACY_ARCHIVE_MIGRATIONS = {
+  "nemo1732_archive_unlocks_v060": {
+    "01":"extra2_fall",
+    "02":"extra4_broken",
+    "03":"main_1732",
+    "04":"extra5_give_him_back"
+  },
+  "nemo1732_archive_unlocks_v058": {
+    "06":"main_1732",
+    "14":"extra2_fall",
+    "16":"extra4_broken",
+    "17":"extra5_give_him_back"
+  },
+  "nemo1732_archive_unlocks_v057": {
+    "06":"main_1732",
+    "14":"extra2_fall",
+    "16":"extra4_broken",
+    "17":"extra5_give_him_back"
+  }
+};
+
+/*
+  ARCHIVE display order:
+  1) MAIN RECORDS in story chronology
+  2) EXTRA RECORD I → V, each in route chronology
+
+  IDs are semantic/stable. Display numbers are derived from array order,
+  so future stills can be inserted chronologically without breaking unlock data.
+*/
 const ARCHIVE_ITEMS = [
-  {"id":"01","legacyId":"14","mode":"extra2","trigger":"x2_74","title":"FALL, STAR OF RECORDS","jp":"巨大魔法陣。観測要塞を落とす王女の力。","image":"stills/extra2_magic_circle.webp"},
-  {"id":"02","legacyId":"16","mode":"extra4","trigger":"x4_120","title":"BROKEN SIGNAL","jp":"久世とねも。殺意と残響が、観測塔でぶつかる。","image":"stills/extra4_kuze_battle.webp"},
-  {"id":"03","legacyId":"06","mode":"main","trigger":"c6_360","title":"17:32","jp":"この17分だけは、誰にも渡さない。","image":"stills/main_1732.webp"}
+  {"id":"main_1732","mode":"main","trigger":"c6_360","title":"17:32","jp":"この17分だけは、誰にも渡さない。","image":"stills/main_1732.webp"},
+  {"id":"extra2_fall","mode":"extra2","trigger":"x2_74","title":"FALL, STAR OF RECORDS","jp":"巨大魔法陣。観測要塞を落とす王女の力。","image":"stills/extra2_magic_circle.webp"},
+  {"id":"extra4_broken","mode":"extra4","trigger":"x4_120","title":"BROKEN SIGNAL","jp":"久世とねも。殺意と残響が、観測塔でぶつかる。","image":"stills/extra4_kuze_battle.webp"},
+  {"id":"extra5_give_him_back","mode":"extra5","trigger":"x5_66","title":"GIVE HIM BACK","jp":"榊を、返して。","image":"stills/extra5_give_him_back.webp"}
 ];
+
+function archiveRecordNo(itemOrId){
+  const id = typeof itemOrId === "string" ? itemOrId : itemOrId?.id;
+  const idx = ARCHIVE_ITEMS.findIndex(item=>item.id === id);
+  return idx >= 0 ? String(idx + 1).padStart(2,"0") : "--";
+}
 
 
 let index = 0;
@@ -159,13 +194,15 @@ function getArchiveUnlocks(){
     const current = new Set((Array.isArray(ids) ? ids : []).filter(id=>allowed.has(id)));
 
     if(current.size === 0){
-      for(const key of LEGACY_ARCHIVE_KEYS){
+      for(const [key, mapping] of Object.entries(LEGACY_ARCHIVE_MIGRATIONS)){
         const legacyRaw = localStorage.getItem(key);
         if(!legacyRaw) continue;
         const legacyIds = JSON.parse(legacyRaw);
         if(!Array.isArray(legacyIds)) continue;
-        ARCHIVE_ITEMS.forEach(item=>{
-          if(item.legacyId && legacyIds.includes(item.legacyId)) current.add(item.id);
+
+        legacyIds.forEach(oldId=>{
+          const newId = mapping[oldId];
+          if(newId && allowed.has(newId)) current.add(newId);
         });
       }
       if(current.size) localStorage.setItem(ARCHIVE_KEY, JSON.stringify([...current]));
@@ -186,7 +223,7 @@ function unlockArchiveItem(id, silent=false){
   unlocked.add(id);
   saveArchiveUnlocks(unlocked);
   if(!silent){
-    showToast(`ARCHIVE RECORD ${id} / RECOVERED`);
+    showToast(`ARCHIVE RECORD ${archiveRecordNo(id)} / RECOVERED`);
     beep(820,.06,.018);
   }
   return true;
@@ -253,7 +290,7 @@ function renderArchive(){
       card.innerHTML = `
         <span class="archive-thumb"><img src="${item.image}" alt="" loading="lazy"></span>
         <span class="archive-card-copy">
-          <span class="archive-card-no">RECORD ${item.id}</span>
+          <span class="archive-card-no">RECORD ${archiveRecordNo(item)}</span>
           <strong>${escapeHtml(item.title)}</strong>
           <span>${escapeHtml(item.jp)}</span>
         </span>`;
@@ -262,14 +299,14 @@ function renderArchive(){
       card.innerHTML = `
         <span class="archive-thumb archive-thumb-locked">
           <span class="archive-lock-mark">LOCKED</span>
-          <span class="archive-lock-no">${item.id}</span>
+          <span class="archive-lock-no">${archiveRecordNo(item)}</span>
         </span>
         <span class="archive-card-copy">
-          <span class="archive-card-no">RECORD ${item.id}</span>
+          <span class="archive-card-no">RECORD ${archiveRecordNo(item)}</span>
           <strong>UNRECOVERED</strong>
           <span>この記録はまだ回収されていません。</span>
         </span>`;
-      card.onclick = ()=>showToast(`RECORD ${item.id} / LOCKED`);
+      card.onclick = ()=>showToast(`RECORD ${archiveRecordNo(item)} / LOCKED`);
     }
     archiveGrid.appendChild(card);
   });
@@ -303,7 +340,7 @@ function openStill(id){
   currentViewerId = id;
   stillViewerImage.src = item.image;
   stillViewerImage.alt = `${item.title} / ${item.jp}`;
-  stillViewerNo.textContent = `RECOVERED RECORD ${item.id} / ${String(ARCHIVE_ITEMS.length).padStart(2,"0")}`;
+  stillViewerNo.textContent = `RECOVERED RECORD ${archiveRecordNo(item)} / ${String(ARCHIVE_ITEMS.length).padStart(2,"0")}`;
   stillViewerTitle.textContent = item.title;
   stillViewerMeta.textContent = item.jp;
   stillViewer.classList.remove("hidden");
