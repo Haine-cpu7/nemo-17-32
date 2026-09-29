@@ -100,10 +100,12 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
 .text{font-size:clamp(18px,1.55vw,24px);line-height:1.9;letter-spacing:.04em;white-space:pre-wrap;min-height:92px}
 .advance-hint{position:absolute;right:20px;bottom:12px;font-size:10px;color:#5f6d7c;letter-spacing:.14em}
 .system-overlay{
-  position:absolute;left:7vw;top:8vh;max-width:min(760px,80vw);z-index:8;
+  position:absolute;left:7vw;top:8vh;max-width:min(760px,80vw);z-index:12;
+  bottom:calc(5vh + 230px + 18px);
   font-family:ui-monospace,Consolas,monospace;color:#bac6d2;
   padding:23px 27px;border-left:2px solid #5b6978;background:rgba(7,10,14,.72);
-  letter-spacing:.04em;line-height:1.82;white-space:pre-wrap
+  letter-spacing:.04em;line-height:1.82;white-space:pre-wrap;
+  overflow:auto
 }
 .system-overlay.alert{border-left-color:#d9e0e6;color:#eef2f5;background:rgba(11,8,10,.78)}
 .hidden{display:none!important}
@@ -361,5 +363,18 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
   #extra5Btn{
     grid-column:1 / -1 !important;
     width:100% !important;
+  }
+}
+
+
+/* v0.5.5 PC fix: record/system panel must stay visible above textbox */
+@media (min-width: 761px){
+  .system-overlay{
+    bottom:calc(5vh + 230px + 18px) !important;
+    overflow:auto !important;
+    z-index:12 !important;
+  }
+  .textbox{
+    z-index:10;
   }
 }
