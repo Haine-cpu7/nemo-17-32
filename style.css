@@ -129,12 +129,175 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
 }
 
 @media(max-width:760px){
-  .title-wrap{left:6vw;right:6vw}
-  .textbox{left:3vw;right:3vw;bottom:3vh;padding:24px 22px 30px;min-height:210px}
-  .top-actions{gap:3px}
-  button.small{padding:6px 6px;font-size:8px}
-  .system-id{font-size:9px}
+  html,body{height:100%;min-height:100%;overscroll-behavior:none}
+  body{overflow:hidden}
+
+  /* --- title screen: mobile-first layout --- */
+  #titleScreen.active{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:
+      max(22px, env(safe-area-inset-top))
+      20px
+      max(26px, env(safe-area-inset-bottom));
+  }
+  #titleScreen{
+    background:
+      radial-gradient(circle at 50% 32%,rgba(122,142,164,.14),transparent 35%),
+      linear-gradient(180deg,#05070a,#0b0f15 54%,#040506);
+  }
+  .title-wrap{
+    position:relative;
+    left:auto;right:auto;bottom:auto;
+    width:100%;max-width:520px;
+  }
+  .eyebrow{
+    font-size:9px;
+    line-height:1.65;
+    letter-spacing:.18em;
+    margin-bottom:16px;
+    max-width:320px;
+  }
+  h1{
+    font-size:clamp(42px,13vw,58px);
+    line-height:.95;
+    letter-spacing:-.05em;
+    white-space:nowrap;
+  }
+  h1 span{font-size:.72em;letter-spacing:-.035em}
+  .tagline{
+    font-size:15px;
+    line-height:1.75;
+    letter-spacing:.06em;
+    margin:24px 0 28px;
+    white-space:nowrap;
+  }
+  .title-actions{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    width:100%;
+  }
+  .title-actions button{
+    width:100%;
+    min-height:60px;
+    padding:11px 8px;
+    font-size:13px;
+    line-height:1.35;
+    letter-spacing:.03em;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  .version{
+    margin-top:22px;
+    font-size:9px;
+    line-height:1.5;
+    letter-spacing:.13em;
+  }
+
+  /* --- in-game top navigation --- */
+  .topbar{
+    height:82px;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:center;
+    gap:7px;
+    padding:7px 10px;
+    padding-top:max(7px, env(safe-area-inset-top));
+  }
+  .system-id{
+    width:100%;
+    font-size:9px;
+    line-height:1.2;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .dot{width:6px;height:6px;margin-right:6px}
+  .top-actions{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:4px;
+    width:100%;
+  }
+  button.small{
+    min-width:0;
+    padding:6px 2px;
+    font-size:8px;
+    line-height:1.15;
+    white-space:nowrap;
+  }
+  #stage{top:82px}
+
+  /* --- novel UI --- */
+  .textbox{
+    left:4vw;right:4vw;
+    bottom:max(14px, env(safe-area-inset-bottom));
+    min-height:168px;
+    max-height:44vh;
+    overflow:auto;
+    padding:24px 18px 30px;
+  }
+  .speaker{
+    top:-16px;left:16px;
+    min-width:96px;
+    padding:6px 12px;
+    font-size:12px;
+  }
+  .text{
+    min-height:78px;
+    font-size:16px;
+    line-height:1.8;
+    letter-spacing:.025em;
+  }
+  .advance-hint{right:14px;bottom:10px;font-size:8px}
+  .system-overlay{
+    left:4vw;right:4vw;top:18px;
+    max-width:none;
+    max-height:39vh;
+    overflow:auto;
+    padding:16px 17px;
+    font-size:12px;
+    line-height:1.65;
+  }
+  .choice-box{
+    width:90vw;
+    top:36%;
+    gap:9px;
+  }
+  .choice-btn{
+    padding:13px 15px;
+    font-size:14px;
+  }
+  .choice-btn:hover{padding-left:15px}
+
+  /* --- panels --- */
+  .panel{
+    padding:
+      max(18px, env(safe-area-inset-top))
+      4vw
+      max(18px, env(safe-area-inset-bottom));
+  }
+  .panel-inner{height:100%;padding:16px}
+  .panel-head h2{font-size:12px}
+  .log-content{font-size:13px}
+  .toast{
+    bottom:max(18px, env(safe-area-inset-bottom));
+    max-width:88vw;
+    text-align:center;
+  }
 }
+
+@media(max-width:390px){
+  #titleScreen.active{padding-left:16px;padding-right:16px}
+  h1{font-size:43px}
+  h1 span{font-size:.68em}
+  .tagline{font-size:14px;letter-spacing:.035em}
+  .title-actions button{min-height:58px;font-size:12px}
+  .version{font-size:8px}
+}
+
 
 
 /* v0.3.3 bilingual system subtitles */

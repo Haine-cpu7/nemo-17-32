@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.4.2
+NEMO : 17:32  COMPLETE v0.4.3
 
 ■ 起動方法
 1. ZIPを展開
@@ -122,3 +122,13 @@ N.E.M.O. OBSERVATION NETWORK / STATUS : OFFLINE / CAUSE : NEMO
 で終了します。
 
 本編・公開用OGP/ファビコンを含んだ公開素材版です。
+
+
+■ v0.4.3 スマホUI改善
+・タイトル画面をスマホ専用レイアウト化
+・NEMO : 17:32を一行表示
+・NEW RECORD / CONTINUE / EXTRA I / EXTRA II を2×2グリッド配置
+・ゲーム中の上部操作メニューを2段化
+・SYSTEM表示、会話ボックス、選択肢、バックログをスマホ幅に最適化
+・iPhone等のSafe Areaに対応
+・PCレイアウトは従来のまま維持
