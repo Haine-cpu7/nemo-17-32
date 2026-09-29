@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.4.0
+NEMO : 17:32  COMPLETE v0.4.1
 
 ■ 起動方法
 1. ZIPを展開
@@ -97,3 +97,10 @@ NEMO本人ではなく“NEMOの記録”だけを終了させます。
 EXTRA / 非正史ルートも引き続き収録されています。
 
 v0.3.4以前のセーブデータを同じブラウザから読み込み可能です。
+
+
+■ v0.4.1 追加
+・URL共有用 OGP画像（ogp.png）を追加
+・ねもちゃんの顔ファビコン（favicon.ico / favicon-32.png / favicon-192.png / favicon-512.png / apple-touch-icon.png）を追加
+・index.html に OGP / Twitter Card / favicon 設定を追加
+・公開URL想定： https://haine-cpu7.github.io/nemo-17-32/
