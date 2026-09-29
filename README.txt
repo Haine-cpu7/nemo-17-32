@@ -407,7 +407,7 @@ END:
 - index.html のキャッシュバージョンを 0.5.9 に更新。
 
 
-[v0.6.1]
+[v0.6.2]
 - 17枚固定アーカイブを廃止。
 - ユーザーが明示的に採用したスチルだけを表示する方式へ変更。
 - 現在の採用スチルは EXTRA RECORD II（巨大魔法陣）と EXTRA RECORD IV（ねも vs 久世）の2枚のみ。
@@ -418,3 +418,10 @@ END:
 [v0.6.1]
 - APPROVED STILLS ONLY の EXTRA RECORD IV スチルを、指定された新しい「久世 vs ねも」イラストへ差し替え。
 - index.html のキャッシュバージョンを 0.6.1 に更新。
+
+
+[v0.6.2]
+- APPROVED STILLS ONLY に本編スチル「17:32」を追加。
+- 画像: stills/main_1732.webp
+- トリガー: c6_360
+- index.html のキャッシュバージョンを 0.6.2 に更新。

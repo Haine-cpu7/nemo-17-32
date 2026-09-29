@@ -11,7 +11,8 @@ const ARCHIVE_KEY = "nemo1732_archive_unlocks_v060";
 const LEGACY_ARCHIVE_KEYS = ["nemo1732_archive_unlocks_v058", "nemo1732_archive_unlocks_v057"];
 const ARCHIVE_ITEMS = [
   {"id":"01","legacyId":"14","mode":"extra2","trigger":"x2_74","title":"FALL, STAR OF RECORDS","jp":"巨大魔法陣。観測要塞を落とす王女の力。","image":"stills/extra2_magic_circle.webp"},
-  {"id":"02","legacyId":"16","mode":"extra4","trigger":"x4_120","title":"BROKEN SIGNAL","jp":"久世とねも。殺意と残響が、観測塔でぶつかる。","image":"stills/extra4_kuze_battle.webp"}
+  {"id":"02","legacyId":"16","mode":"extra4","trigger":"x4_120","title":"BROKEN SIGNAL","jp":"久世とねも。殺意と残響が、観測塔でぶつかる。","image":"stills/extra4_kuze_battle.webp"},
+  {"id":"03","legacyId":"06","mode":"main","trigger":"c6_360","title":"17:32","jp":"この17分だけは、誰にも渡さない。","image":"stills/main_1732.webp"}
 ];
 
 
