@@ -1,0 +1,152 @@
+
+:root{
+  --bg:#07090d;
+  --text:#edf3f7;
+  --muted:#8998a8;
+  --line:#2b3744;
+  --paper:#dfe7ee;
+  --dark:#090c11;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;background:#000;color:var(--text);font-family:"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif}
+body{overflow:hidden}
+button{font:inherit}
+
+.screen{display:none;width:100vw;height:100vh;position:relative}
+.screen.active{display:block}
+
+#titleScreen{
+  background:
+    radial-gradient(circle at 50% 35%,rgba(122,142,164,.13),transparent 34%),
+    linear-gradient(180deg,#05070a,#0b0f15 55%,#040506);
+}
+.scanlines{
+  position:absolute;inset:0;pointer-events:none;opacity:.12;
+  background:repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0,rgba(255,255,255,.03) 1px,transparent 1px,transparent 4px)
+}
+.title-wrap{position:absolute;left:8vw;bottom:12vh;max-width:1000px}
+.eyebrow{font-size:12px;letter-spacing:.22em;color:#8190a0;margin-bottom:20px}
+h1{font-size:clamp(58px,9vw,142px);line-height:.86;margin:0;font-weight:800;letter-spacing:-.055em}
+h1 span{font-weight:300;color:#aab6c1}
+.tagline{font-size:clamp(18px,2vw,28px);margin:30px 0 38px;color:#dce4ea;letter-spacing:.08em}
+.title-actions{display:flex;gap:12px}
+button{
+  border:1px solid #44515f;background:rgba(13,17,23,.88);color:#dfe7ee;
+  padding:12px 18px;cursor:pointer;transition:.16s ease
+}
+button:hover:not(:disabled){background:#e6edf2;color:#080a0d;border-color:#e6edf2}
+button:disabled{opacity:.35;cursor:not-allowed}
+button.primary{background:#dfe7ee;color:#07090d;border-color:#dfe7ee;font-weight:700}
+.version{margin-top:26px;font-size:11px;color:#64717f;letter-spacing:.18em}
+
+.topbar{
+  height:54px;background:#080b10;border-bottom:1px solid #1e2833;display:flex;
+  align-items:center;justify-content:space-between;padding:0 18px;position:absolute;top:0;left:0;right:0;z-index:20
+}
+.system-id{font-family:ui-monospace,Consolas,monospace;color:#9aa8b6;font-size:12px;letter-spacing:.08em}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c3ccd5;margin-right:8px;box-shadow:0 0 10px rgba(220,230,240,.35)}
+.top-actions{display:flex;gap:7px}
+button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
+
+#stage{position:absolute;top:54px;left:0;right:0;bottom:0;background:#090b0f;overflow:hidden}
+#bgLayer{position:absolute;inset:0;transition:background .7s,filter .7s}
+.bg-black{background:#030405}
+.bg-street{
+  background:
+    linear-gradient(180deg,rgba(31,38,47,.08),rgba(10,12,16,.62)),
+    radial-gradient(circle at 68% 35%,rgba(225,194,137,.18),transparent 17%),
+    linear-gradient(120deg,#18202a 0 30%,#11171e 30% 52%,#20242b 52% 60%,#10141a 60%)
+}
+.bg-rain{
+  background:
+    repeating-linear-gradient(100deg,rgba(210,225,235,.028) 0,rgba(210,225,235,.028) 1px,transparent 1px,transparent 13px),
+    radial-gradient(circle at 30% 25%,rgba(134,151,171,.11),transparent 30%),
+    linear-gradient(150deg,#111822,#0b1017 55%,#06080c)
+}
+.bg-night{
+  background:
+    radial-gradient(circle at 60% 28%,rgba(116,130,151,.08),transparent 22%),
+    linear-gradient(160deg,#0b0f15,#111720 45%,#06080d)
+}
+.bg-room{
+  background:
+    radial-gradient(circle at 72% 32%,rgba(233,185,112,.11),transparent 18%),
+    linear-gradient(135deg,#17171a 0 26%,#0c0f14 26% 66%,#151319 66%)
+}
+.bg-riverside{
+  background:
+    linear-gradient(180deg,rgba(80,102,125,.13),transparent 35%),
+    linear-gradient(170deg,#111a25 0 48%,#0a1119 48% 62%,#10151b 62%)
+}
+.bg-white{
+  background:linear-gradient(180deg,#dfe5ea,#cfd7de);
+  filter:brightness(.9)
+}
+#pulseLayer{position:absolute;inset:0;pointer-events:none;opacity:0}
+.pulse{animation:pulseFlash .65s ease}
+@keyframes pulseFlash{0%{opacity:0}35%{opacity:.18;background:#fff}100%{opacity:0}}
+
+.vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 190px rgba(0,0,0,.84)}
+.textbox{
+  position:absolute;left:5vw;right:5vw;bottom:5vh;min-height:190px;
+  background:linear-gradient(180deg,rgba(9,12,16,.92),rgba(7,10,13,.97));
+  border:1px solid #2b3643;border-left:3px solid #bac4ce;
+  padding:28px 34px 34px;z-index:10;box-shadow:0 20px 80px rgba(0,0,0,.45)
+}
+.speaker{
+  position:absolute;top:-18px;left:24px;background:#dfe7ee;color:#0b0d10;
+  min-width:120px;padding:7px 14px;font-weight:700;font-size:14px;letter-spacing:.04em
+}
+.text{font-size:clamp(18px,1.55vw,24px);line-height:1.9;letter-spacing:.04em;white-space:pre-wrap;min-height:92px}
+.advance-hint{position:absolute;right:20px;bottom:12px;font-size:10px;color:#5f6d7c;letter-spacing:.14em}
+.system-overlay{
+  position:absolute;left:7vw;top:8vh;max-width:min(760px,80vw);z-index:8;
+  font-family:ui-monospace,Consolas,monospace;color:#bac6d2;
+  padding:23px 27px;border-left:2px solid #5b6978;background:rgba(7,10,14,.72);
+  letter-spacing:.04em;line-height:1.82;white-space:pre-wrap
+}
+.system-overlay.alert{border-left-color:#d9e0e6;color:#eef2f5;background:rgba(11,8,10,.78)}
+.hidden{display:none!important}
+.choice-box{
+  position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);
+  width:min(720px,82vw);z-index:30;display:flex;flex-direction:column;gap:12px
+}
+.choice-btn{
+  text-align:left;padding:16px 20px;font-size:17px;background:rgba(11,15,21,.96);
+  border:1px solid #384656
+}
+.choice-btn:hover{padding-left:28px}
+.panel{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:100;padding:5vh 8vw}
+.panel-inner{height:90vh;background:#0b0f14;border:1px solid #27323e;padding:24px;overflow:hidden}
+.panel-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #27323e;padding-bottom:12px}
+.panel-head h2{font-family:ui-monospace,Consolas,monospace;letter-spacing:.16em;font-size:15px;margin:0}
+.log-content{height:calc(100% - 58px);overflow:auto;padding:18px 8px 40px}
+.log-entry{border-bottom:1px solid #171f29;padding:12px 4px;color:#b8c3cd;line-height:1.7}
+.log-entry strong{color:#eef3f7;margin-right:10px}
+.toast{
+  position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:200;
+  background:#e6edf2;color:#0a0c0f;padding:10px 18px;font-size:12px;font-weight:700;letter-spacing:.06em
+}
+
+@media(max-width:760px){
+  .title-wrap{left:6vw;right:6vw}
+  .textbox{left:3vw;right:3vw;bottom:3vh;padding:24px 22px 30px;min-height:210px}
+  .top-actions{gap:3px}
+  button.small{padding:6px 6px;font-size:8px}
+  .system-id{font-size:9px}
+}
+
+
+/* v0.3.3 bilingual system subtitles */
+.system-overlay .jp-sub,
+.text .jp-sub {
+  display:block;
+  margin-top:10px;
+  padding-top:9px;
+  border-top:1px solid rgba(180,196,210,.18);
+  color:#8fa0b1;
+  font-family:"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;
+  font-size:.88em;
+  line-height:1.7;
+  letter-spacing:.02em;
+}
