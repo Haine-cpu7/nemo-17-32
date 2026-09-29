@@ -354,3 +354,12 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
     overflow-wrap:anywhere !important;
   }
 }
+
+
+/* v0.5.4: seventh title button gets the final full-width row on mobile */
+@media (max-width: 760px){
+  #extra5Btn{
+    grid-column:1 / -1 !important;
+    width:100% !important;
+  }
+}
