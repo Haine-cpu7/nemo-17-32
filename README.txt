@@ -440,3 +440,28 @@ END:
 - ARCHIVE内部IDを意味ベースの固定IDへ変更し、表示番号は並び順から自動採番。
 - 今後スチルを途中へ追加しても、既存の解放記録が別の絵に化けない構造へ変更。
 - v0.6.0系および旧17枚版からのARCHIVE解放状態を移行。
+
+
+[v0.6.5]
+- EXTRA RECORD II / FALL, STAR OF RECORDS のスチルを最終採用版へ差し替え。
+- 片手を掲げ、冷えた『さようなら』の表情で観測要塞を落とすねも。
+- ARCHIVEの並び順・解放状態・他の採用スチルは変更なし。
+- index.html のキャッシュバージョンを 0.6.5 に更新。
+
+
+[v0.6.6]
+- CHAPTER 04 / 観測外 の川辺スチルを追加。
+- ARCHIVE名: OFF RECORD
+- トリガー: c4_130
+- 本編時系列に従い、17:32より前へ配置。
+- 既存スチルの解放状態・内部IDは維持。
+- ARCHIVEは採用済み5枚のみ。
+
+
+[v0.6.7]
+- 本編 CHAPTER 09 / 処分 の正式スチル「TERMINATED」を追加。
+- 画像: stills/main_terminated.webp
+- トリガー: c9_080
+- ARCHIVE時系列: OFF RECORD → 17:32 → TERMINATED → EXTRA II → EXTRA IV → EXTRA V。
+- 既存スチルの内部IDと解放状態は維持。
+- ARCHIVEは採用済み6枚のみ。
