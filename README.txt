@@ -1,4 +1,4 @@
-NEMO : 17:32  COMPLETE v0.5.0
+NEMO : 17:32  COMPLETE v0.5.1
 
 ■ 起動方法
 1. ZIPを展開
@@ -258,4 +258,15 @@ END:
 ・すべて同じ幅・同じ高さ
 ・EXTRA IIIの横2列ぶち抜き表示を廃止
 ・長いLOCKED表示も中央揃えで収まるよう調整
+・PC版レイアウトは変更なし
+
+
+■ v0.5.1 タイトル画面キャッシュ対策
+・iPhone / Safari で古い style.css が残り、EXTRA RECORD III が横長のまま表示されるケースに対応
+・style.css / script.js に ?v=0.5.1 のクエリを付与して強制再取得
+・さらに index.html にスマホタイトル画面の 2列×3段グリッドを inline style で明示
+・6ボタンの位置を nth-child で固定
+  1段目 NEW RECORD / CONTINUE
+  2段目 EXTRA RECORD I / EXTRA RECORD II
+  3段目 EXTRA RECORD III / EXTRA RECORD IV
 ・PC版レイアウトは変更なし
