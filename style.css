@@ -189,9 +189,6 @@ button.small{font-size:10px;padding:7px 9px;color:#aeb9c4}
     white-space:normal;
     overflow-wrap:anywhere;
   }
-  #extra3Btn{
-    grid-column:1 / -1;
-  }
   .version{
     margin-top:22px;
     font-size:9px;
