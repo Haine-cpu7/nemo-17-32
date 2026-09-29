@@ -465,3 +465,31 @@ END:
 - ARCHIVE時系列: OFF RECORD → 17:32 → TERMINATED → EXTRA II → EXTRA IV → EXTRA V。
 - 既存スチルの内部IDと解放状態は維持。
 - ARCHIVEは採用済み6枚のみ。
+
+
+[v0.6.8]
+- 本編 CHAPTER 02 / 介入 の正式スチル「INTERVENTION」を追加。
+- 画像: stills/main_intervention.webp
+- トリガー: c2_060
+- ねもは雨の中で傘を差していたが、榊に腕を引かれ、傘が地面へ落ちた場面として採用。
+- ARCHIVE時系列: INTERVENTION → OFF RECORD → 17:32 → TERMINATED → EXTRA II → EXTRA IV → EXTRA V。
+- ARCHIVEは採用済み7枚のみ。
+
+
+[v0.6.9]
+- 本編 CHAPTER 14 / それは榊じゃない の正式スチル「NOT SAKAKI」を追加。
+- 画像: stills/main_not_sakaki.webp
+- トリガー: c14_040
+- ARCHIVE時系列: INTERVENTION → OFF RECORD → 17:32 → TERMINATED → NOT SAKAKI → EXTRA II → EXTRA IV → EXTRA V。
+- 既存スチルの内部IDと解放状態は維持。
+- ARCHIVEは採用済み8枚のみ。
+
+
+[v0.7.0]
+- 本編 FINAL / 誰にも渡さない の正式スチル「TWO BUNS」を追加。
+- 画像: stills/main_two_buns.webp
+- トリガー: f_160
+- ARCHIVE時系列: INTERVENTION → OFF RECORD → 17:32 → TERMINATED → NOT SAKAKI → TWO BUNS → EXTRA II → EXTRA IV → EXTRA V。
+- 正史ラストの、ねもが肉まんを二つ持つ場面を採用。
+- 既存スチルの内部IDと解放状態は維持。
+- ARCHIVEは採用済み9枚のみ。

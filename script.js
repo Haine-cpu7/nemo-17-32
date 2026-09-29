@@ -38,9 +38,12 @@ const LEGACY_ARCHIVE_MIGRATIONS = {
   so future stills can be inserted chronologically without breaking unlock data.
 */
 const ARCHIVE_ITEMS = [
+  {"id":"main_intervention","mode":"main","trigger":"c2_060","title":"INTERVENTION","jp":"腕を引いた、その一瞬だけ、観測者ではいられなかった。","image":"stills/main_intervention.webp"},
   {"id":"main_riverside","mode":"main","trigger":"c4_130","title":"OFF RECORD","jp":"初めて、二人で「観測場所」ではない場所を歩いた。","image":"stills/main_riverside.webp"},
   {"id":"main_1732","mode":"main","trigger":"c6_360","title":"17:32","jp":"この17分だけは、誰にも渡さない。","image":"stills/main_1732.webp"},
   {"id":"main_terminated","mode":"main","trigger":"c9_080","title":"TERMINATED","jp":"榊透。STATUS : TERMINATED。","image":"stills/main_terminated.webp"},
+  {"id":"main_not_sakaki","mode":"main","trigger":"c14_040","title":"NOT SAKAKI","jp":"……あなた、榊じゃないね。","image":"stills/main_not_sakaki.webp"},
+  {"id":"main_two_buns","mode":"main","trigger":"f_160","title":"TWO BUNS","jp":"それでも、肉まんは二つ。","image":"stills/main_two_buns.webp"},
   {"id":"extra2_fall","mode":"extra2","trigger":"x2_74","title":"FALL, STAR OF RECORDS","jp":"巨大魔法陣。観測要塞を落とす王女の力。","image":"stills/extra2_magic_circle.webp"},
   {"id":"extra4_broken","mode":"extra4","trigger":"x4_120","title":"BROKEN SIGNAL","jp":"久世とねも。殺意と残響が、観測塔でぶつかる。","image":"stills/extra4_kuze_battle.webp"},
   {"id":"extra5_give_him_back","mode":"extra5","trigger":"x5_66","title":"GIVE HIM BACK","jp":"榊を、返して。","image":"stills/extra5_give_him_back.webp"}
